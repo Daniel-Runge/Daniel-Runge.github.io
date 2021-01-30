@@ -1,167 +1,79 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'kumbu Sans', sans-serif;
-    scroll-behavior: smooth;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-.navbar{
-    background: #131313;
-    height: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.2rem;
-    position: sticky;
-    top: 0;
-    z-index: 999;
+body {
+  margin: 0;
+  padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin: 0;
 }
 
-.navbarContainer{
-    display: flex;
-    justify-content: space-between;
-    height: 80px;
-    z-index: 1;
-    width: 100%;
-    max-width: 1300px;
-    margin: 0 auto;
-    padding: 0 50px;
+img {
+  max-width: 100%;
+  display: block;
 }
 
-.navbarLogo{
-    background-color: #ff8177;
-    background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
-    background-size: 100%;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    text-decoration: none;
-    font-size: 2rem;
+main {
+  min-height: 100vh;
+  background: linear-gradient(to right top, #13547a, #80d0c7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.navbarMenu{
-    display: flex;
-    align-items: center;
-    list-style: none;
+.bubble {
+  background: white;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.9),
+    rgba(255, 255, 255, 0.3)
+  );
+  position: absolute;
+  height: 15vw;
+  width: 15vw;
+  border-radius: 50%;
+  top: 7%;
+  right: 15%;
 }
 
-.navbarItem{
-    height: 80px;
+.glassPane {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 10%;
+  background: white;
+  min-height: 80vh;
+  width: 60%;
+  min-width: 16rem;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );
+  backdrop-filter: blur(1rem);
+  border-radius: 2rem;
+  z-index: 2;
 }
 
-.navbarLinks{
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 125px;
-    text-decoration: none;
-    height: 100%;
-    transition: all 0.3s ease;
+.introduction {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
 }
 
-.navbarButton{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 1rem;
-    width: 100%;
-}
-
-.button{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    padding: 10px 20px;
-    height: 100%;
-    width: 100%;
-    border: none;
-    outline: none;
-    border-radius: 4px;
-    background: #833ab4;
-    background: -webkit-linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);
-    background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);
-    color: white;
-    transition: all 0.3s ease;
-}
-
-.navbarLinks:hover{
-    color: #9518fc;
-    transition: all 0.3s ease;
-}
-
-@media screen and (max-width: 960px){
-    .navbarContainer{
-        display: flex;
-        justify-content: space-between;
-        height: 80px;
-        z-index: 1;
-        width: 100%;
-        max-width: 1300px;
-        padding: 0;
-
-    }
-    .navbarMenu{
-        display: grid;
-        grid-template-columns: auto;
-        margin: 0;
-        width: 100%;
-        position: absolute;
-        top: -1000px;
-        opacity: 1;
-        transition: all 0.5s ease;
-        z-index: -1;
-    }
-
-    .navbarMenu .active{
-        background: #131313;
-        top: 100%;
-        opacity: 1;
-        transition: all 0.5s ease;
-        z-index: 99;
-        height: 60vh;
-        font-size: 1.6rem;
-    }
-
-    #navbarLogo{
-        padding-left: 25px;
-    }
-    
-    .nabarToggle .bar{
-        width: 25px;
-        height: 3px;
-        margin: 5px auto;
-        transition: all 0.3s ease-in-out;
-        background: white;
-    }
-
-    .navbarItem{
-        width: 100%;
-    }
-
-    .navbarLinks{
-        text-align: center;
-        padding: 2rem;
-        width: 100%;
-        display: table;
-    }
-
-    .navbarButton{
-        padding-bottom: 2rem;
-    }
-
-    .button{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 80%;
-        height: 80px;
-        margin: 0;
-    }
+.introductionAvatar {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
 }
