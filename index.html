@@ -2,80 +2,277 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Daniel's Portfolio</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="keywords" content="CV, Portfolio, HTML, CSS, JavaScript, Developer">
+  <meta name="author" content="Daniel Runge Petersen">
+  <meta name="description"
+    content="This is the portfolio and Curriculum Vitae of computer science student Daniel Runge Petersen">
+
+  <meta property="og:url" content="https://daniel-runge.github.io/">
+  <meta property="og:image" content="avatar.JPG" />
+  <meta property="twitter:url" content="https://daniel-runge.github.io/">
+
+  <meta name="theme-color" content="rgb(0, 51, 40)">
+
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+  <script src="js/main.js" defer></script>
+
+  <title>Daniel's Resume &amp; CV</title>
+
 </head>
 
 <body>
-  <main>
-    <script src="js/javaScript.js"></script>
-    <div class="dashboard">
-      <section class="sidebar">
-        <header class="sidebarHeader">
-          <img src="/images/avatar.JPG" alt="" class="sidebarAvatar">
-          <h1 class="sidebarHeaderName">Daniel Runge Petersen</h1>
-          <h2 class="sidebarHeaderTitle">Student</h2>
-        </header>
-        <address>
-          <a href="mailto:dpet20@student.aau.dk">dpet20@student.aau.dk</a><br>
-          <a href="tel:+4523922321">+45 23 92 23 21</a>
-        </address>
-        <section class="skillsList">
-          <div class="skill">IT</div>
-          <div class="skill">Cooking</div>
-          <div class="skill">Eating</div>
-        </section>
-        <button class="projectCatalogue">Project Catalogue</button>
-      </section>
-      <section class="details">
-        <header class="detailsHeader">
-          <h1>About me</h1>
-        </header>
-        <p class="aboutMe">I'm interested in a job in IT.</p>
-        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum
-          tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas
-          semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-        <div class="card">
-          <img src="/images/javascript-logo.svg" alt="" class="cardImage">
-          <div class="container">
-            <h4><b>Portfolio website</b></h4>
-            <p>Creating an interactive website to consolidate my professional information.</p>
+  <header class="header1" id="header">
+    <nav class="nav container">
+      <a href="#" class="navLogo">Daniel</a>
+
+      <div class="navMenu" id="navMenu">
+        <ul class="navList">
+          <li class="navItem"><a href="#home" class="navLink activeLink"><i class="bx bx-home navIcon"></i>Home</a></li>
+          <li class="navItem"><a href="#profile" class="navLink"><i class="bx bx-user navIcon"></i>Profile</a></li>
+          <li class="navItem"><a href="#education" class="navLink"><i class="bx bx-book navIcon"></i>Education</a></li>
+          <li class="navItem"><a href="#skills" class="navLink"><i class="bx bx-receipt navIcon"></i>Skills</a></li>
+          <li class="navItem"><a href="#experience" class="navLink"><i
+                class="bx bx-briefcase-alt navIcon"></i>Experience</a></li>
+          <li class="navItem"><a href="#certificates" class="navLink"><i class="bx bx-award navIcon"></i>Certificates</a></li>
+          <li class="navItem"><a href="#references" class="navLink"><i
+                class="bx bx-link-external navIcon"></i>References</a></li>
+        </ul>
+      </div>
+
+      <div class="navToggle" id="navToggle">
+        <i class="bx bx-grid-alt"></i>
+      </div>
+    </nav>
+  </header>
+
+  <main class="main1 container">
+    <div class="resume">
+      <div class="resumeLeft">
+
+        <!-- HOME -->
+        <section class="home" id="home">
+          <div class="homeContainer section grid">
+            <div class="homeData grid">
+              <img src="/images/avatar.JPG" alt="" class="homeImage">
+
+              <h1 class="homeTitle">DANIEL <b>RUNGE</b></h1>
+              <h3 class="homeProfession">Computer Science Student</h3>
+
+              <!-- Mobile download -->
+              <div>
+                <a download="" href="/pdf/CurriculumVitae.pdf" class="homeButtonMobil">Download</a>
+              </div>
+            </div>
+
+            <div class="homeAddress grid">
+              <span class="homeInformation">
+                <a href="" class="socialLink"><i class="bx bx-map socialIcon"></i>Signalvej 6, 1tv, 9000 Aalborg</a>
+              </span>
+              <span class="homeInformation">
+                <a href="mailto:dpet20@student.aau.dk" class="socialLink"><i
+                    class="bx bx-envelope socialIcon"></i>dpet20@student.aau.dk</a>
+              </span>
+              <span class="homeInformation">
+                </i><a href="tel:+4523922321" class="socialLink"><i class="bx bx-phone socialIcon"></i>+45 23 92 23
+                  21</a>
+              </span>
+              <!-- Might want to remove this -->
+              <div class="socialContainer grid">
+                <a href="https://www.facebook.com/daniel.runge.petersen" target="_blank" class="socialLink"><i
+                    class="bx bxl-facebook socialIcon"></i>@Daniel.Runge.Petersen</a>
+                <a href="https://github.com/Daniel-Runge" target="_blank" class="socialLink"><i
+                    class="bx bxl-github socialIcon"></i>@Daniel-Runge</a>
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+
+
+
+        <!-- PROFILE -->
+        <section class="profile section" id="profile">
+          <h2 class="sectionTitle">Profile</h2>
+
+          <p class="profileDescription">I am a studious, responsible and hard working computer science student at AAU. I
+            enjoy technical challenges, and reducing problems to solutions. Aside from University I also work on
+            projects such as this resume, to improve my technical and creative skills.</p>
+        </section>
+
+        <!-- EDUCATION -->
+        <section class="education section" id="education">
+          <h2 class="sectionTitle">Education</h2>
+
+          <div class="educationContainer grid">
+
+            <div class="educationContent">
+              <div class="educationTime">
+                <span class="educationRounder"></span>
+                <span class="educationLine"></span>
+              </div>
+
+              <div class="educationData grid">
+                <h3 class="educationTitle">Computer Science</h3>
+                <span class="educationStudies">AAU Datalogi</span>
+                <span class="educationYear">2020 - 2021</span>
+              </div>
+
+            </div>
+
+            <div class="educationContent">
+              <div class="educationTime">
+                <span class="educationRounder"></span>
+                <span class="educationLine"></span>
+              </div>
+
+              <div class="educationData grid">
+                <h3 class="educationTitle">Algorithms and datastructures</h3>
+                <span class="educationStudies">AU Datalogi</span>
+                <span class="educationYear">2019 - 2020</span>
+              </div>
+
+            </div>
+
+            <div class="educationContent">
+              <div class="educationTime">
+                <span class="educationRounder"></span>
+              </div>
+
+              <div class="educationData grid">
+                <h3 class="educationTitle">Medicine</h3>
+                <span class="educationStudies">AU Health</span>
+                <span class="educationYear">2016 - 2020</span>
+              </div>
+
+            </div>
+
+          </div>
+        </section>
+
+        <!-- SKILLS -->
+        <section class="skills section" id="skills">
+          <h2 class="sectionTitle">Skills</h2>
+
+          <div class="skillsContent grid">
+            <ul class="skillsData">
+              <li class="skillsName"><span class="skillsCircle"></span>C</li>
+              <li class="skillsName"><span class="skillsCircle"></span>Java</li>
+              <li class="skillsName"><span class="skillsCircle"></span>Python</li>
+              <li class="skillsName"><span class="skillsCircle"></span>Scala</li>
+            </ul>
+
+            <ul class="skillsData">
+              <li class="skillsName"><span class="skillsCircle"></span>Flutter</li>
+              <li class="skillsName"><span class="skillsCircle"></span>JavaScript</li>
+              <li class="skillsName"><span class="skillsCircle"></span>Firebase</li>
+              <li class="skillsName"><span class="skillsCircle"></span>Node</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- EXPERIENCE -->
+        <section class="experience section" id="experience">
+          <h2 class="sectionTitle">Experience</h2>
+
+          <div class="experienceContainer grid">
+
+            <div class="experienceContent">
+              <div class="experienceTime">
+                <span class="experienceRounder"></span>
+                <span class="experienceLine"></span>
+              </div>
+
+              <div class="experienceData grid">
+                <h3 class="experienceTitle">AutoStore Logistics | CAC</h3>
+
+                <p class="experienceDescription">Contributed to the process optimization and automation following the
+                  installation of a new Autostore system at CAC.</p>
+                <span class="experienceCompany">2019 - 2020</span>
+              </div>
+
+            </div>
+
+            <div class="experienceContent">
+              <div class="experienceTime">
+                <span class="experienceRounder"></span>
+              </div>
+
+              <div class="experienceData grid">
+                <h3 class="experienceTitle">Warehouse Logistics | Defco</h3>
+                <p class="experienceDescription">Simple student-part time job at a butchery warehouse</p>
+                <span class="experienceCompany">2015 - 2019</span>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        <!-- CERTIFICATES/GRADES -->
+        <section class="certificate section" id="certificates">
+          <h2 class="sectionTitle">Certificates</h2>
+
+          <div class="certificateContainer grid">
+            
+            <div class="certificateContent">
+              <h3 class="certificateTitle">PBL Competence Profile</h3>
+              <p class="certificateDescription">The PBL method from AAU and the skills related to it</p>
+            </div>
+
+            <div class="certificateContent">
+              <h3 class="certificateTitle">Student journal</h3>
+              <p class="certificateDescription">Academic transcript documenting developer courses at AU and AAU</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- CERTIFICATES/GRADES -->
+        <section class="references section" id="references">
+          <h2 class="sectionTitle">References</h2>
+
+          <div class="referencesContainer grid">
+
+            <div class="referencesContent grid">
+              <span class="referencesSubtitle">Warehouse manager</span>
+              <h3 class="referencesTitle">Lars Riedel Jørgensen</h3>
+              <ul class="referencesContact">
+                <li><a href="mailto:lrj@cac.dk" class="referencesLink"><i
+                  class="bx bx-envelope referencesIcon"></i>lrj@cac.dk</a></li>
+            <li><a href="tel:+4550603009" class="referencesLink"><i class="bx bx-phone referencesIcon"></i>+45 50 60
+                30 09</a></li>
+              </ul>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- LANGUAGES -->
+        <section class="languages section">
+          <h2 class="sectionTitle">Languages</h2>
+
+          <div class="languagesContainer">
+            <ul class="languagesContent grid">
+              <li class="languagesName"><img src="/images/dkflag.png" alt="" class="languagesFlag"> Danish</li>
+              <li class="languagesName"><img src="/images/enflag.png" alt="" class="languagesFlag">English</li>
+              <li class="languagesName"><img src="/images/scanflag.png" alt="" class="languagesFlag">Scandinavian</li>
+              <li class="languagesName"><img src="/images/gerflag.png" alt="" class="languagesFlag">German</li>
+            </ul>
+          </div>
+        </section>
+
+
+
+
+
+      </div>
+
+      <div class="resumeRight">
+
+      </div>
     </div>
   </main>
 </body>
-
-</html>
-
-<!-- <body>
-    <div class="bubble">First bubble</div>
-    <main>
-      <secion class="glassDashboard">
-        <section class="sidebar">
-          <h1 class="sidebarheader">Ducktor Genius</h1>
-          <img src="/images/avatar.JPG" alt="" class="sidebarAvatar">
-          <section class="sidebarText">
-            <p>Notes to self: Animation with my debug duck "Ducktor Genius". "The only
-              reason this bozo hyping himself up here has gotten anything done, is me!
-              You may call me Duck, or genius, if you like.</p>
-          </section>
-        </section>
-        <section class="details">
-          header.
-        </section>
-      </section>
-
-    </main>
-    <footer>footer test</footer>
-
-    <!-- <h1>Landing page</h1>
-    <p>Work in progress.</p>
-    <p>This site will work as my portfolie and CV.</p>
-    <p>
-       -->
-</p>
-</body> -->
