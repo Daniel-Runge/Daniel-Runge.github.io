@@ -363,3 +363,117 @@ img {
   height: 1rem;
   margin-right: .25rem;
 }
+
+/* -------------INTERESTS */
+.interestsContainer{
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: var(--mg2);
+}
+
+.interestsContent{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.interestsIcon{
+  font-size: 1.5rem;
+  color: var(--lightColor);
+  margin-bottom: .25rem;
+}
+
+/* To top button */
+.scrolltop{
+  position: fixed;
+  right: 1rem;
+  bottom: -20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: .3rem;
+  background-color: #F0EFEF;
+  border-radius: .4rem;
+  z-index: 10;
+  transition: .4s;
+  visibility: hidden;
+}
+
+.scrolltopIcon{
+  font-size: 1.2rem;
+  color: var(--textColor);
+}
+
+.showScroll{
+  visibility: visible;
+  bottom: 5rem;
+}
+
+/* Two column menu for small devices*/
+@media screen and (max-width: 320px){
+  .navList{
+    grid-template-columns: repeat(2,1fr);
+    gap: 1rem .5rem;
+  }
+}
+
+@media screen and (min-width: 968px){
+  body{
+    margin: 3rem 0;
+  }
+
+  .container{
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .header1,
+  .scrolltop{
+    display: none;
+  }
+
+  .resume{
+    display: grid;
+    grid-template-columns: .5fr 1fr;
+    background-color: #FAFAFA;
+    box-shadow: 0 0 8px rgba(13,12,12,.15);
+  }
+
+  .resumeLeft{
+    background-color: #F0EFEF;
+  }
+
+  .resumeLeft,
+  .resumeRight{
+    padding: 0 1.5rem;
+  }
+
+  .sectionTitle,
+  .profileDescription{
+    text-align: initial;
+  }
+
+  .homeContainer{
+    gap: 1.5rem;
+  }
+
+  .homeButtonMobil{
+    display: none;
+  }
+
+  .referencesContainer{
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .languagesContent{
+    grid-template-columns: repeat(4, max-content);
+    column-gap: 3.5rem;
+  }
+
+  .interestsContainer{
+    grid-template-columns: repeat(6, max-content);
+    column-gap: 3.5rem;
+  }
+  
+}
+
+
