@@ -62,6 +62,10 @@ body.darkTheme{
   color: var(--titleColor);
 }
 
+.bx-sun{
+  color: #fdd835;
+}
+
 body.scaleCV{
   --h1-font-size: .938rem;
   --h2-font-size: .938rem;
@@ -265,6 +269,10 @@ img {
     border-radius: 1rem 1rem 0 0;
     z-index: var(--zFixed);
     transition: 0.3s;
+  }
+
+  .generatePDF{
+    visibility: hidden;
   }
 }
 
