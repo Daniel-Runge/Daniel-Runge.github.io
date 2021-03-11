@@ -100,7 +100,7 @@ let areaCV = document.getElementById('areaCV')
 let resumeButton = document.getElementById('resumeButton')
 let opt = {
     margin: 0,
-    filename: 'myResume.pdf',
+    filename: 'Resume.pdf',
     pagebreak: { before: '.beforeClass', after: ['#after1', '#after2'], avoid: 'img' },
     image: {type: 'jpeg', quality: 0.98},
     html2canvas: {backgroundColor: '#000000', scale: 4},
