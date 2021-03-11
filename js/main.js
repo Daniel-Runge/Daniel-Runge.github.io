@@ -55,6 +55,69 @@ function scrollTop() {
 }
 window.addEventListener('scroll', scrollTop);
 
+/* Light/dark theme */
+const themeButton = document.getElementById('themeButton');
+const darkTheme = 'darkTheme';
+const iconTheme = 'bx-sun';
+
+// Previously selected topic (if user selected)
+const selectedTheme = localStorage.getItem('selected-theme');
+const selectedIcon = localStorage.getItem('selected-icon');
+
+// We obtain the current theme that the interface has by validating the dark-theme class
+const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light';
+const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'bx-moon' : 'bx-sun';
+
+// We validate if the user previously chose a topic
+if (selectedTheme) {
+  // If the validation is fulfilled, we ask what the issue was to know if we activated or deactivated the dark
+  document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme);
+  themeButton.classList[selectedIcon === 'bx-moon' ? 'add' : 'remove'](iconTheme);
+}
+
+// Activate / deactivate the theme manually with the button
+themeButton.addEventListener('click', () => {
+    // Add or remove the dark / icon theme
+    document.body.classList.toggle(darkTheme);
+    themeButton.classList.toggle(iconTheme);
+    // We save the theme and the current icon that the user chose
+    localStorage.setItem('selected-theme', getCurrentTheme());
+    localStorage.setItem('selected-icon', getCurrentIcon());
+})
+
+// Reduce size and print to A4
+function scaleCV(){
+    document.body.classList.add('scaleCV');
+}
+
+// Return size to normal
+function removeScale() {
+    document.body.classList.remove('scaleCV');
+}
+
+// Generate PDF
+let areaCV = document.getElementById('areaCV')
+let resumeButton = document.getElementById('resumeButton')
+let opt = {
+    margin: 0,
+    filename: 'myResume.pdf',
+    pagebreak: { before: '.beforeClass', after: ['#after1', '#after2'], avoid: 'img' },
+    image: {type: 'jpeg', quality: 0.98},
+    html2canvas: {backgroundColor: '#000000', scale: 4},
+    jsPDF: {format: [281.5, 200], orientation: 'portrait'}
+}
+
+
+function generateResume() {
+    html2pdf(areaCV, opt)
+}
+
+resumeButton.addEventListener('click', () => {
+    scaleCV();
+    generateResume();
+    setTimeout(removeScale, 3000);
+})
+
 /* SITE LOAD TIME */
 
 // (function () {

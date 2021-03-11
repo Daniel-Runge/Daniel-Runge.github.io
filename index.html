@@ -21,6 +21,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
 
   <script src="js/main.js" defer></script>
+  <script src="js/html2pdf.bundle.min.js" defer></script>
 
   <title>Daniel's Resume &amp; CV</title>
 
@@ -53,7 +54,7 @@
   </header>
 
   <main class="main1 container">
-    <div class="resume">
+    <div class="resume" id="areaCV">
       <div class="resumeLeft">
         <!-- HOME -->
         <section class="home" id="home">
@@ -94,6 +95,10 @@
           </div>
 
           <!-- Change theme -->
+          <i class="bx bx-moon changeTheme" title="Theme" id="themeButton"></i>
+
+          <!-- Download PDF -->
+          <i class="bx bx-download generatePDF" title="Generate PDF" id="resumeButton"></i>
 
         </section>
 
@@ -123,7 +128,7 @@
               <div class="educationData grid">
                 <h3 class="educationTitle">Computer Science</h3>
                 <span class="educationStudies">AAU Datalogi</span>
-                <span class="educationYear">2020 - 2021</span>
+                <span class="educationYear">2020 - now</span>
               </div>
 
             </div>
@@ -248,9 +253,9 @@
               <span class="referencesSubtitle">Warehouse manager</span>
               <h3 class="referencesTitle">Lars Riedel Jørgensen</h3>
               <ul class="referencesContact">
-                <li><a href="mailto:lrj@cac.dk" class="referencesLink"><i
+                <li><a href="mailto:lrj@cac.dk" class="socialLink"><i
                       class="bx bx-envelope referencesIcon"></i>lrj@cac.dk</a></li>
-                <li><a href="tel:+4550603009" class="referencesLink"><i class="bx bx-phone referencesIcon"></i>+45 50 60
+                <li><a href="tel:+4550603009" class="socialLink"><i class="bx bx-phone referencesIcon"></i>+45 50 60
                     30 09</a></li>
               </ul>
             </div>
@@ -296,6 +301,6 @@
     </div>
   </main>
   <!-- To top button -->
-  <a href="" class="scrolltop" id="scrollTop"><i class="bx bx-up-arrow-alt scrolltopIcon"></i></a>
+  <a href="#" class="scrolltop" id="scrollTop"><i class="bx bx-up-arrow-alt scrolltopIcon"></i></a>
 
 </body>
