@@ -107,9 +107,8 @@ let opt = {
     jsPDF: {format: [281.5, 200], orientation: 'portrait'}
 }
 
-
 function generateResume() {
-    html2pdf(areaCV, opt)
+    html2pdf(areaCV, opt);
 }
 
 resumeButton.addEventListener('click', () => {

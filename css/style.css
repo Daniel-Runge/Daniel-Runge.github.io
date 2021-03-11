@@ -224,7 +224,7 @@ img {
 }
 
 .container {
-  max-width: 969 px;
+  max-width: 969px;
   width: calc(100% - 3rem);
   margin-left: var(--mg3);
   margin-right: var(--mg3);
